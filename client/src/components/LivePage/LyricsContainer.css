@@ -23,7 +23,8 @@
   display: flex;
   flex-wrap: wrap; /* Allow words to wrap if there's not enough space */
   align-items: flex-start; /* Align chords and lyrics to the top */
-  margin-bottom: 10px; /* Space between lines */
+  margin-bottom: 5px; /* Space between lines */
+  line-height: 2.5; /* Consistent spacing within a single line that wraps */
 }
 
 .lyrics-word {
@@ -34,7 +35,6 @@
   color: #000000;
   margin-right: 10px;
   font-size: 1.2rem; /* Font size for lyrics */
-  flex-basis: auto; /* Allow words to size themselves dynamically */
   white-space: nowrap; /* Prevent wrapping within words */
   position: relative; /* Allow absolute positioning of the chord */
 }
@@ -42,17 +42,17 @@
 .chord {
   font-weight: bold;
   color: #f39c12;
-  font-size: 1rem; /* Font size for the chords */
-  position: absolute; /* Position the chord absolutely */
-  bottom: 100%; /* Position it above the lyrics */
-  left: 50%; /* Center the chord horizontally */
-  transform: translateX(-50%); /* Center based on its width */
-  margin-bottom: 2px; /* Add a small space below the chord if needed */
+  font-size: 1rem;
+  position: absolute; /* Use absolute positioning */
+  top: -1.2rem; /* Position the chord above the word without affecting the word's line height */
+  left: 50%;
+  transform: translateX(-50%); /* Center the chord above the word */
+  margin-bottom: 2px; /* Ensure spacing between the chord and word */
 }
 
 /* Additional rules for lyrics with vocals to maintain consistent spacing */
 .lyrics-line.vocals {
-  margin-bottom: 5px; /* Closer spacing for vocals */
+  margin-bottom: 10px; /* Closer spacing for vocals */
 }
 
 /* RTL (Right-to-Left) styling for Hebrew or RTL languages */

@@ -29,6 +29,8 @@ input:focus {
   color: red;
   font-size: 0.875rem;
   margin-top: 0.25rem;
+  min-height: 1.2rem; /* Set minimum height to reserve space for the error message */
+  visibility: visible; /* Error message will take up space even if hidden */
 }
 
 .control-error p {

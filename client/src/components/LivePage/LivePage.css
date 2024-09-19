@@ -24,7 +24,7 @@
     border-radius: 5px;
     font-size: 1.1rem;
     cursor: pointer;
-    margin-bottom: 20px; /* Add space below the quit button */
+    margin-bottom: 0px; /* Add space below the quit button */
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }

@@ -1,19 +1,31 @@
 /* EntryPage.css */
 
 .entry-title {
-    color: #fdd835; /* Yellow color for the title */
-    font-size: 2.5rem; /* Font size */
-    text-align: center; /* Center the title */
-    margin-bottom: 30px; /* Space below the title */
+  color: #000000;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.entry-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  color: #fff;
+  display: flex;
+  gap: 10px;
 }
 
-.button-container {
+
+/* .button-container {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center buttons horizontally */
-    gap: 20px; /* Space between buttons */
-    width: 100%; /* Ensure buttons take full width */
-    max-width: 400px; /* Limit the width of the button container */
-    max-width: 100%; /* Limit the width of the button container */
-    margin: 0 auto; /* Center the container within the parent */
-}
+    align-items: center; 
+    gap: 20px;
+    width: 100%;
+    max-width: 400px; 
+    max-width: 100%; 
+    margin: 0 auto;
+} */

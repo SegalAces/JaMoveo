@@ -18,7 +18,10 @@
     list-style-type: none; /* Remove default bullet points */
     padding: 0;
     margin: 0;
-  }
+    max-height: 250px; /* Limit height of the song list container */
+    overflow-y: auto; /* Enable vertical scrolling */
+    padding-right: 10px; /* Optional: padding to prevent content from touching the scrollbar */
+}
   
   .song-item {
     padding: 15px 20px;

@@ -69,7 +69,7 @@ const MainPage = ({ user }) => {
     }
   };
   return (
-    <div className="main-page">
+    <div className="main-page-container">
       {loading ? ( // Show loading indicator if loading
         <div className="loading-indicator">Loading...</div> // Styled loading indicator
       ) : song ? (
