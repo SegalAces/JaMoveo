@@ -1,0 +1,34 @@
+.sign-up-container {
+    max-width: 400px; /* Limit max width of the signup form */
+    margin: 0 auto; /* Center the form */
+    padding: 20px; /* Add padding around the form */
+    background: rgba(0, 0, 0, 0.7); 
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    color: #fff; 
+    /* Remove fixed max-height to allow it to grow naturally */
+    overflow: visible; /* Ensure no scroll within this container */
+}
+
+/* Header styles */
+.sign-up-container h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 5px;
+    margin-top: -10px;
+    color: #ffcc00; 
+}
+
+/* Form styles */
+.sign-up-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
+}
+
+/* Form field styles */
+.sign-up-container label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}

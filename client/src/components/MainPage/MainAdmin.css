@@ -1,0 +1,87 @@
+/* MainAdmin.css */
+  
+.start-rehearsal-button {
+  background-color: #fdd835; /* Yellow background */
+  color: #333; /* Dark text for contrast */
+  padding: 10px 20px; /* Padding for button */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 1.2rem; /* Font size */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+  margin: 20px auto; /* Center the button */
+  display: block; /* Make it a block element for centering */
+}
+
+/* Button hover effect */
+.start-rehearsal-button:hover {
+  background-color: #fbc02d; /* Slightly darker yellow on hover */
+}
+  
+  /* Search section styling */
+  .search-section {
+    display: flex; /* Use flexbox for alignment */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    max-width: 300px; /* Set a maximum width for the section */
+    margin: 0 auto; /* Center the section */
+    width: 100%; /* Full width on smaller screens */
+  }
+  /* Title styling in the search section */
+  .search-section h2 {
+    color: #fdd835; /* Yellow color for the title */
+    margin-bottom: 10px; /* Space below the title if needed */
+  }
+  
+  /* Input field styling */
+  .search-section input {
+    padding: 10px; /* Padding for input */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1rem; /* Font size */
+    width: 100%; /* Full width */
+    margin-bottom: 10px; /* Space below the input */
+  }
+  
+  /* Search button styling */
+  .search-button {
+    background-color: #fdd835; /* Yellowish tone */
+    color: #333; /* Dark text for contrast */
+    padding: 10px 20px; /* Padding for button */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1.2rem; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+  }
+  
+  /* Search button hover effect */
+  .search-button:hover {
+    background-color: #fbc02d; /* Slightly darker yellow on hover */
+  }
+  
+/* Responsive styling */
+@media (max-width: 768px) {
+  .main-admin-container {
+    max-width: 90%; /* Adjust width on smaller screens */
+  }
+
+  .start-rehearsal-button {
+    width: 100%; /* Full width for buttons */
+  }
+
+  .search-section input {
+    font-size: 0.9rem; /* Smaller font size for input */
+    width: 100%; /* Ensure full width on smaller screens */
+    max-width: none; /* Remove any max-width if necessary */
+  }
+}
+
+@media (max-width: 480px) {
+  .start-rehearsal-button, .search-button {
+    font-size: 1rem; /* Smaller font size for buttons */
+  }
+
+  .search-section input {
+    font-size: 0.8rem; /* Adjust font size further for mobile if needed */
+  }
+}

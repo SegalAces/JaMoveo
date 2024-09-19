@@ -1,0 +1,111 @@
+.result-page-container {
+    padding: 20px;
+    background-color: #646262; /* Darker grey for better contrast */
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  
+  .result-page-container h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    color: #fdd835; /* Yellow color for the title */
+    margin-bottom: 20px;
+  }
+  
+  .songs-list {
+    list-style-type: none; /* Remove default bullet points */
+    padding: 0;
+    margin: 0;
+  }
+  
+  .song-item {
+    padding: 15px 20px;
+    margin-bottom: 10px;
+    background-color: #ffecb3; /* Light yellow for song items */
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between; /* Space between title and artist */
+    align-items: center;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth hover transition */
+  }
+  
+  .song-item:hover {
+    background-color: #fdd835; /* Slightly darker yellow on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add more shadow on hover */
+  }
+  
+  .song-item strong {
+    font-size: 1.2rem;
+    color: #333; /* Dark color for contrast */
+  }
+  
+  .song-item span {
+    font-size: 1rem;
+    color: #131111; /* Slightly lighter color for artist */
+  }
+
+  /* New search button styling */
+.new-search-button {
+  background-color: #fdd835; /* Yellow button */
+  color: #333; /* Dark text for contrast */
+  padding: 10px 20px; /* Padding for button */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 1.2rem; /* Font size */
+  cursor: pointer; /* Pointer cursor on hover */
+  display: block; /* Make it a block element for centering */
+  width: 100%; /* Full width */
+  margin-top: 20px; /* Space above the button */
+}
+
+/* Button hover effect */
+.new-search-button:hover {
+  background-color: #fbc02d; /* Slightly darker yellow on hover */
+}
+
+.no-songs-message {
+  text-align: center; /* Center the message */
+  font-size: 1.2rem; /* Font size */
+  color: #fff; /* White color for contrast */
+  margin-top: 20px; /* Space above the message */
+}
+  
+  /* Responsive styling */
+  @media (max-width: 768px) {
+    .result-page-container {
+      max-width: 90%;
+    }
+  
+    .song-item {
+      padding: 12px 16px;
+    }
+  
+    .song-item strong {
+      font-size: 1.1rem;
+    }
+  
+    .song-item span {
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .result-page-container {
+      max-width: 100%;
+    }
+  
+    .song-item {
+      padding: 10px 14px;
+    }
+  
+    .song-item strong {
+      font-size: 1rem;
+    }
+  
+    .song-item span {
+      font-size: 0.8rem;
+    }
+  }

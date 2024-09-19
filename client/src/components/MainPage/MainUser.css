@@ -1,0 +1,13 @@
+.main-user-container {
+  text-align: center; /* Center the text */
+  margin: 20px auto; /* Center the container */
+}
+  .rehearsal-status {
+    background-color: #fdd835; /* Yellow background */
+    color: #333; /* Dark text for contrast */
+    padding: 10px 20px; /* Padding for the status message */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1.2rem; /* Font size */
+    display: inline-block; /* Make it inline block for proper centering */
+    transition: background-color 0.3s ease; /* Smooth transition */
+  }

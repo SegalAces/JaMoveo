@@ -1,0 +1,21 @@
+.custom-button {
+    background-color: #fdd835; /* Yellowish tone */
+    color: #333; /* Dark text for contrast */
+    padding: 10px 20px; /* Button padding */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1.2rem; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s, transform 0.1s; /* Smooth background color change and scale effect */
+    width: 100%; /* Full width */
+}
+
+.custom-button:hover {
+    background-color: #fbc02d; /* Slightly darker yellow on hover */
+    transform: scale(1.05); /* Slightly increase size on hover */
+}
+
+.custom-button:focus {
+    outline: none; /* Remove outline on focus */
+    box-shadow: 0 0 0 3px rgba(253, 216, 53, 0.5); /* Focus ring matching the yellow */
+}

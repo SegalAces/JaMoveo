@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebSocket Test</title>
+</head>
+<body>
+    <script>
+        const socket = new WebSocket("ws://localhost:8000/ws/notifications");
+
+        socket.onopen = () => {
+            console.log("WebSocket connection established");
+
+            // Send a valid JSON object instead of plain text
+            const message = JSON.stringify({
+                action: "start_rehearsal"
+            });
+            socket.send(message);
+        };
+
+        socket.onmessage = (event) => {
+            console.log("Message from server:", event.data);
+        };
+
+        socket.onerror = (error) => {
+            console.error("WebSocket error:", error);
+        };
+
+        socket.onclose = () => {
+            console.log("WebSocket connection closed");
+        };
+    </script>
+</body>

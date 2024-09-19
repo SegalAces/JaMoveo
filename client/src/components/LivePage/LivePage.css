@@ -1,0 +1,95 @@
+/* The live-page-container that holds all the content */
+.live-page-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align content from the top */
+    align-items: center; /* Center content horizontally */
+    width: auto; /* Allow the width to adjust based on content */
+    padding: 20px;
+    background-color: #646262; /* Darker grey for better contrast */
+    position: relative; /* Position relative to handle absolute elements */
+    box-sizing: border-box;
+    overflow: hidden; /* Prevent content from overflowing */
+    border-radius: 10px;
+    position: relative;
+  }
+  
+  /* Quit button positioned at the top-left */
+  .quit-button {
+    align-self: flex-start; /* Align quit button to the left */
+    background-color: #e74c3c;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin-bottom: 20px; /* Add space below the quit button */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Button hover effect */
+  .quit-button:hover {
+    background-color: #c0392b;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Button active effect */
+  .quit-button:active {
+    background-color: #a93226;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Title and artist container */
+  .content-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align from top */
+    align-items: center;
+    text-align: center;
+  }
+  
+  /* Title and artist styling */
+  h1 {
+    color: #fdd835; /* Yellow color for the title */
+    font-size: 2rem;
+    margin: 0; /* Remove default margins */
+  }
+  
+  h3 {
+    color: #fdd835; /* Yellow color for the title */
+    margin: 10px 0 0 0; /* Space below the title */
+  }
+  
+  /* Responsive adjustments for smaller screens */
+  @media (max-width: 768px) {
+    .quit-button {
+      padding: 8px 16px; /* Reduce button padding on smaller screens */
+      font-size: 1rem; /* Reduce button font size */
+    }
+  
+    h1 {
+      font-size: 1.5rem; /* Reduce title size for smaller screens */
+    }
+  
+    h3 {
+      font-size: 1rem; /* Reduce artist size for smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .quit-button {
+      padding: 6px 12px; /* Reduce button padding for mobile */
+      font-size: 0.9rem; /* Smaller font size */
+    }
+  
+    h1 {
+      font-size: 1.2rem; /* Further reduce title size for mobile */
+    }
+  
+    h3 {
+      font-size: 0.9rem; /* Further reduce artist size for mobile */
+    }
+  }
+  
