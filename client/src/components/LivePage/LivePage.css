@@ -4,15 +4,15 @@
     flex-direction: column;
     justify-content: flex-start; /* Align content from the top */
     align-items: center; /* Center content horizontally */
-    width: auto; /* Allow the width to adjust based on content */
+    width: 100%; /* Allow the width to adjust based on content */
     padding: 20px;
     background-color: #646262; /* Darker grey for better contrast */
-    position: relative; /* Position relative to handle absolute elements */
     box-sizing: border-box;
     overflow: hidden; /* Prevent content from overflowing */
     border-radius: 10px;
     position: relative;
   }
+  /*position: relative; /* Position relative to handle absolute elements */
   
   /* Quit button positioned at the top-left */
   .quit-button {
@@ -48,6 +48,7 @@
     justify-content: flex-start; /* Align from top */
     align-items: center;
     text-align: center;
+    width: 100%; /* Ensure container takes full width */
   }
   
   /* Title and artist styling */
@@ -55,6 +56,7 @@
     color: #fdd835; /* Yellow color for the title */
     font-size: 2rem;
     margin: 0; /* Remove default margins */
+    word-wrap: break-word; /* Allow long titles to wrap on small screens */
   }
   
   h3 {
@@ -65,7 +67,7 @@
   /* Responsive adjustments for smaller screens */
   @media (max-width: 768px) {
     .quit-button {
-      padding: 8px 16px; /* Reduce button padding on smaller screens */
+      padding: 10px 18px; /* Reduce button padding on smaller screens */
       font-size: 1rem; /* Reduce button font size */
     }
   
@@ -80,7 +82,7 @@
   
   @media (max-width: 480px) {
     .quit-button {
-      padding: 6px 12px; /* Reduce button padding for mobile */
+      padding: 8px 16px; /* Reduce button padding for mobile */
       font-size: 0.9rem; /* Smaller font size */
     }
   
@@ -90,6 +92,10 @@
   
     h3 {
       font-size: 0.9rem; /* Further reduce artist size for mobile */
+    }
+
+    .content-container {
+      padding: 10px;
     }
   }
   

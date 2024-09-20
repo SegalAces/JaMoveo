@@ -94,25 +94,25 @@
   /* Tablet and smaller screens */
 
   .lyrics-container {
-    padding: 5px; /* Reduce padding for smaller screens */
-    font-size: 18px; /* Slightly smaller font size for lyrics */
+    padding: 10px; /* Reduce padding for smaller screens */
+    font-size: 1rem; /* Slightly smaller font size for lyrics */
   }
 
   .lyrics-line {
-    margin-bottom: 10px; /* Reduce spacing between lines */
+    margin-bottom: 8px; /* Reduce spacing between lines */
   }
 
   .lyrics-word {
-    font-size: 1.1rem; /* Slightly smaller font size for lyrics on tablets */
+    font-size: 1rem; /* Slightly smaller font size for lyrics on tablets */
   }
 
   .chord {
-    top: -15px; /* Adjust chord positioning for smaller screens */
-    font-size: 16px; /* Adjust chord size to match lyrics */
+    top: -1rem; /* Adjust chord positioning for smaller screens */
+    font-size: 0.9rem; /* Adjust chord size to match lyrics */
   }
   .scrolling-button {
     padding: 10px 20px; /* Slightly reduce padding for tablets */
-    font-size: 1.1rem; /* Slightly smaller font size */
+    font-size: 1rem; /* Slightly smaller font size */
   }
 }
 
@@ -120,22 +120,23 @@
   /* Mobile phones */
 
   .lyrics-container {
-    padding: 3px; /* Further reduce padding for mobile devices */
-    font-size: 16px; /* Smaller font size for compact display */
+    padding: 5px; /* Further reduce padding */
+    font-size: 0.9rem; /* Adjust for mobile screens */
+    height: 40vh; /* Increase height on mobile for better readability */
   }
 
   .lyrics-line {
-    margin-bottom: 8px; /* Further reduce spacing between lines */
+    margin-bottom: 6px; /* Further reduce spacing between lines */
   }
 
   .lyrics-word {
     margin-right: 5px; /* Narrower margin between words */
-    font-size: 1rem; /* Further reduced font size for mobile screens */
+    font-size: 0.9rem; /* Further reduced font size for mobile screens */
   }
 
   .chord {
-    top: -12px; /* Further adjust chord positioning */
-    font-size: 14px; /* Smaller chord size for mobile */
+    top: -0.8rem; /* Further adjust chord positioning */
+    font-size: 0.8rem; /* Smaller chord size for mobile */
   }
   .scrolling-button {
     padding: 8px 16px; /* Reduce padding for mobile devices */
