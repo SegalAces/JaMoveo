@@ -19,27 +19,3 @@
     outline: none; 
     box-shadow: 0 0 0 3px rgba(253, 216, 53, 0.5); 
 }
-
-
-/* .custom-button {
-    background-color: #fdd835; V
-    color: #333;    VX
-    padding: 10px 20px; V
-    border: none; V
-    border-radius: 5px;  VV
-    font-size: 1.2rem; VV
-    cursor: pointer;  V
-    transition: background-color 0.3s, transform 0.1s;  VV
-    width: 100%; XV
-}
-
-.custom-button:hover {
-    background-color: #fbc02d; VX
-    transform: scale(1.05); XV
-}
-
-.custom-button:focus {
-    outline: none; 
-    box-shadow: 0 0 0 3px rgba(253, 216, 53, 0.5); 
-}
- */

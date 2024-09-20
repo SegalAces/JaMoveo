@@ -10,7 +10,6 @@
     width: 100%;
 }
 
-/* Header styles */
 .sign-up-container h2 {
     text-align: center;
     font-size: 24px;
@@ -18,14 +17,12 @@
     color: #ffcc00; 
 }
 
-/* Form styles */
 .sign-up-container form {
     display: flex;
     flex-direction: column;
     gap: 15px; 
 }
 
-/* Form field styles */
 .sign-up-container label {
     display: block;
     margin-bottom: 8px;
@@ -35,16 +32,16 @@
 .error-message {
     color: red;
     font-size: 0.875rem;
-    min-height: 1.2rem; /* Reserve space for the error message */
+    min-height: 1.2rem; 
     margin-top: 0.25rem;
 }
 
 select {
-    padding: 0.5rem; /* Same padding as input */
-    font-size: 1rem; /* Same font size as input */
-    border: 1px solid #ccc; /* Same border as input */
-    border-radius: 5px; /* Same border radius as input */
+    padding: 0.5rem;
+    font-size: 1rem; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
     transition: border-color 0.3s ease;
-    height: auto; /* Ensure it adjusts with padding */
+    height: auto; 
   }
   

@@ -14,7 +14,7 @@ const LyricsContainer = ({ lyrics, language, instrument }) => {
         if (lyricsRef.current) {
           lyricsRef.current.scrollBy(0, 1); // Scroll down slowly
         }
-      }, 30); // Adjust speed as needed
+      }, 65); // Adjust speed as needed
     }
 
     return () => clearInterval(scrollInterval); // Cleanup the interval

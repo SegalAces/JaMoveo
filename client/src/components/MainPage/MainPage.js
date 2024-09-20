@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import MainAdmin from "./MainAdmin"; // Assuming these are your components
+import MainAdmin from "./MainAdmin";
 import MainUser from "./MainUser";
 import LivePage from "../LivePage/LivePage.js";
 import "./MainPage.css";
@@ -9,7 +9,7 @@ const MainPage = ({ user }) => {
     isRehearsalOn: false,
     song: null,
   });
-  const [loading, setLoading] = useState(true); // Add loading state
+  const [loading, setLoading] = useState(true);
   const socketRef = useRef(null);
   useEffect(() => {
     socketRef.current = new WebSocket(
@@ -18,12 +18,7 @@ const MainPage = ({ user }) => {
     // Handle WebSocket messages
     socketRef.current.onmessage = (message) => {
       const data = JSON.parse(message.data);
-      console.log(
-        "got socket message. rehearsal state: ",
-        data.rehearsal_state
-      );
-      console.log("got socket message. song: ", data.current_song);
-      // Update the entire rehearsalState object
+      // Update the rehearsalState object
       setRehearsalState({
         isRehearsalOn: data.rehearsal_state === "active",
         song: data.current_song,
@@ -44,13 +39,10 @@ const MainPage = ({ user }) => {
       if (socketRef.current) {
         sendMessage({ action: "stop_rehearsal", username: user.username });
         socketRef.current.close();
-        console.log("WebSocket closed on tab close");
       }
     };
 
     window.addEventListener("beforeunload", handleBeforeUnload);
-
-    // Cleanup WebSocket and remove event listener
     return () => {
       window.removeEventListener("beforeunload", handleBeforeUnload);
       if (socketRef.current) {
@@ -62,12 +54,11 @@ const MainPage = ({ user }) => {
   const { isRehearsalOn, song } = rehearsalState;
 
   const sendMessage = (message) => {
-    console.log("sending message: ", message);
     if (socketRef.current && socketRef.current.readyState === WebSocket.OPEN) {
       socketRef.current.send(JSON.stringify(message));
-      console.log("sent message: ", message);
     }
   };
+  /*renders Main admin page or Main user page based on user role. if a song is chosen to play rendering the Live page.*/
   return (
     <div className="main-page-container">
       {loading ? ( // Show loading indicator if loading

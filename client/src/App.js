@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom"; // Import Routes instead of Switch
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import MainPage from "./components/MainPage/MainPage.js";
 import EntryPage from "./components/EntryPage/EntryPage.js";
 import { SERVER_URL } from "./config.js";
@@ -31,10 +31,10 @@ const App = () => {
             setUser(data);
             setIsAuthenticated(true);
           } else {
-            setIsAuthenticated(false);
+            setIsAuthenticated(false); //if the response is not provided with needed data 
           }
         } else {
-          setIsAuthenticated(false);
+          setIsAuthenticated(false); // if the response is not ok
         }
       } catch (error) {
         console.error("Token verification failed:", error);
@@ -89,36 +89,3 @@ const App = () => {
 };
 
 export default App;
-
-// (
-//     <Router>
-//         <div className="app-container">
-//             <div className="main-content-container">
-//                 <Routes>
-//                     <Route path="/admin/signup" element={<EntryPage role="admin" defaultAction="Signup" onLogin={handleLogin} />} />
-//                     <Route path="/" element={isAuthenticated ? <MainPage user={user} /> : <EntryPage onLogin={handleLogin} />} />
-//                 </Routes>
-//             </div>
-//         </div>
-//     </Router>
-// );
-
-// import React from 'react';
-// import MainPage from './components/MainPage/MainPage.js'; // Import your MainPage component
-// import EntryPage from './components/EntryPage/EntryPage.js'; // Import your EntryPage component
-// import './App.css';
-
-// function App() {
-//   const user = { role: "admin", instrument: "vocals", username: "Segal"};
-//   const authenticatedUser = true; // Fixed variable name
-
-//   return (
-//     <div className="app-container">
-//       <div className="main-content-container">
-//         {authenticatedUser ? <MainPage user={user} /> : <EntryPage />}
-//       </div>
-//     </div>
-//   );
-// }
-
-// export default App;

@@ -65,9 +65,9 @@ function SignUp({ role = "user", handleSuccessfulSignup }) {
     };
 
     try {
+      // if form is ok sending its content to server.
       await submitSignup(values);
     } catch (error) {
-      console.error("Network error:", error);
       setInstrumentError("Network error. Please check your connection.");
     }
   };
@@ -85,6 +85,7 @@ function SignUp({ role = "user", handleSuccessfulSignup }) {
     return true;
   };
 
+  //submitting signup. 
   const submitSignup = async (values) => {
     setLoading(true);
     const response = await fetch(`${SERVER_URL}/signup`, {
@@ -94,6 +95,7 @@ function SignUp({ role = "user", handleSuccessfulSignup }) {
     });
 
     if (response.ok) {
+      // current state render the Login page right after.
       handleSuccessfulSignup();
     } else {
       handleErrorResponse(response);
@@ -101,17 +103,18 @@ function SignUp({ role = "user", handleSuccessfulSignup }) {
     setLoading(false);
   };
 
+  // handle error returned from the server.
   const handleErrorResponse = async (response) => {
     const error = await response.json();
     if (response.status === 400 && error.detail === "Username already exists") {
       setUsernameTaken(true);
       errorModal.current.showModal();
     } else {
-      console.error("Signup failed:", error.detail);
       setInstrumentError("Signup failed. Please try again later.");
     }
   };
 
+  /*rendering a sign up form. must enter username, password and to choose an instrument.*/
   return (
     <div className="sign-up-container">
       <h2>{role === "user" ? "User" : "Admin"} Signup</h2>

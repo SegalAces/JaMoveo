@@ -2,21 +2,19 @@
 .live-page-container {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* Align content from the top */
-    align-items: center; /* Center content horizontally */
-    width: 100%; /* Allow the width to adjust based on content */
+    justify-content: flex-start; 
+    align-items: center;
+    width: 100%; 
     padding: 20px;
-    background-color: #646262; /* Darker grey for better contrast */
+    background-color: #646262; 
     box-sizing: border-box;
-    overflow: hidden; /* Prevent content from overflowing */
+    overflow: hidden;
     border-radius: 10px;
     position: relative;
   }
-  /*position: relative; /* Position relative to handle absolute elements */
   
-  /* Quit button positioned at the top-left */
   .quit-button {
-    align-self: flex-start; /* Align quit button to the left */
+    align-self: flex-start; 
     background-color: #e74c3c;
     color: #ffffff;
     padding: 10px 20px;
@@ -24,74 +22,71 @@
     border-radius: 5px;
     font-size: 1.1rem;
     cursor: pointer;
-    margin-bottom: 0px; /* Add space below the quit button */
+    margin-bottom: 0px; 
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
   
-  /* Button hover effect */
   .quit-button:hover {
     background-color: #c0392b;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
   }
   
-  /* Button active effect */
   .quit-button:active {
     background-color: #a93226;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
   }
   
-  /* Title and artist container */
   .content-container {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* Align from top */
+    justify-content: flex-start; 
     align-items: center;
     text-align: center;
-    width: 100%; /* Ensure container takes full width */
+    width: 100%; 
   }
   
   /* Title and artist styling */
   h1 {
-    color: #fdd835; /* Yellow color for the title */
+    color: #fdd835;
     font-size: 2rem;
-    margin: 0; /* Remove default margins */
-    word-wrap: break-word; /* Allow long titles to wrap on small screens */
+    margin: 0; 
+    word-wrap: break-word;
   }
   
   h3 {
-    color: #fdd835; /* Yellow color for the title */
-    margin: 10px 0 0 0; /* Space below the title */
+    color: #fdd835; 
+    margin: 10px 0 0 0; 
   }
   
   /* Responsive adjustments for smaller screens */
   @media (max-width: 768px) {
     .quit-button {
-      padding: 10px 18px; /* Reduce button padding on smaller screens */
-      font-size: 1rem; /* Reduce button font size */
+      padding: 10px 18px; 
+      font-size: 1rem; 
     }
   
     h1 {
-      font-size: 1.5rem; /* Reduce title size for smaller screens */
+      font-size: 1.5rem;
     }
   
     h3 {
-      font-size: 1rem; /* Reduce artist size for smaller screens */
+      font-size: 1rem; 
     }
   }
   
   @media (max-width: 480px) {
     .quit-button {
-      padding: 8px 16px; /* Reduce button padding for mobile */
-      font-size: 0.9rem; /* Smaller font size */
+      padding: 8px 16px; 
+      font-size: 0.9rem; 
     }
   
     h1 {
-      font-size: 1.2rem; /* Further reduce title size for mobile */
+      font-size: 1.2rem;
     }
   
     h3 {
-      font-size: 0.9rem; /* Further reduce artist size for mobile */
+      font-size: 0.9rem;
     }
 
     .content-container {

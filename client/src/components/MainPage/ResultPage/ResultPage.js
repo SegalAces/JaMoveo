@@ -2,8 +2,7 @@ import React from "react";
 import './ResultPage.css';
 
 const ResultPage = ({ songs, onSongSelection, onNewSearch }) => {
-  console.log('results inside resultpage component', songs);
-  
+/*showing songs return from database. */  
   return (
     <div className="result-page-container">
       <h2>Select a Song</h2>

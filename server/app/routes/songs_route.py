@@ -16,9 +16,8 @@ def contains_hebrew(text):
     hebrew_pattern = re.compile(r'[\u0590-\u05FF]')
     return bool(hebrew_pattern.search(text))
 
-# Function to transpose the word order in each line
+# Function to transpose the words order in each line
 def transpose_song(song):
-    """Transpose the word order in each line for Hebrew songs."""
     if 'chords' in song and isinstance(song['chords'], list):
         for line in song['chords']:
             line.reverse()
@@ -26,7 +25,6 @@ def transpose_song(song):
 
 # Helper function to find songs where the title contains all given words
 async def find_songs_by_query(query: str, db):
-    print('looking for songs with: ', query)
     songs_collection = db['songs']  # Access the songs collection from db
 
     if not query.strip():  
@@ -43,14 +41,12 @@ async def find_songs_by_query(query: str, db):
 
 @router.get("/search/songs")
 async def search_songs(query: str = "", db = Depends(get_db)):
-    print(f"Received query: {query}")
     try:
         # If the query is empty, return the first 50 songs
         if not query:
             songs = await find_songs_by_query("", db)
             return {"songs": songs}  # Return the first 50 songs
         
-        print('song request', query)
         songs = await find_songs_by_query(query, db)
 
         # If there are no songs found for the query, return an empty list
@@ -64,5 +60,4 @@ async def search_songs(query: str = "", db = Depends(get_db)):
 
         return {"songs": songs}
     except Exception as e:
-        print(f"Error occurred: {e}")
         raise HTTPException(status_code=500, detail="An unexpected error occurred.")

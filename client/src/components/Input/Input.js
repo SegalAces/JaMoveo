@@ -1,4 +1,5 @@
 import "./Input.css";
+/*an Input custome component */
 export default function Input({ label, id, error, ...props }) {
   return (
     <div className="control-no-margin">

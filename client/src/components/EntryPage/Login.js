@@ -92,7 +92,7 @@ function Login({ handleLogin, role = "user" }) {
       console.error("Login failed:", error.detail);
     }
   };
-
+/*render a login form. user needs to enter username and password. */
   return (
     <div className="sign-up-container">
       <h2>{role === 'user'? "User" : "Admin"} Login</h2>

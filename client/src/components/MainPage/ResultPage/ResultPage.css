@@ -1,8 +1,8 @@
 .result-page-container {
     padding: 20px;
-    background-color: #646262; /* Darker grey for better contrast */
+    background-color: #646262;
     border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
     max-width: 300px;
     margin: 0 auto;
   }
@@ -10,73 +10,69 @@
   .result-page-container h2 {
     text-align: center;
     font-size: 1.8rem;
-    color: #fdd835; /* Yellow color for the title */
+    color: #fdd835; 
     margin-bottom: 20px;
   }
   
   .songs-list {
-    list-style-type: none; /* Remove default bullet points */
+    list-style-type: none; 
     padding: 0;
     margin: 0;
-    max-height: 250px; /* Limit height of the song list container */
-    overflow-y: auto; /* Enable vertical scrolling */
-    padding-right: 10px; /* Optional: padding to prevent content from touching the scrollbar */
+    max-height: 250px; 
+    overflow-y: auto; 
+    padding-right: 10px; 
 }
   
   .song-item {
     padding: 15px 20px;
     margin-bottom: 10px;
-    background-color: #ffecb3; /* Light yellow for song items */
+    background-color: #ffecb3; 
     border-radius: 8px;
     cursor: pointer;
     display: flex;
-    justify-content: space-between; /* Space between title and artist */
+    justify-content: space-between; 
     align-items: center;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth hover transition */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; 
   }
   
   .song-item:hover {
-    background-color: #fdd835; /* Slightly darker yellow on hover */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add more shadow on hover */
+    background-color: #fdd835;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
   }
   
   .song-item strong {
     font-size: 1.2rem;
-    color: #333; /* Dark color for contrast */
+    color: #333; 
   }
-  
   .song-item span {
     font-size: 1rem;
-    color: #131111; /* Slightly lighter color for artist */
+    color: #131111; 
   }
 
-  /* New search button styling */
 .new-search-button {
-  background-color: #fdd835; /* Yellow button */
-  color: #333; /* Dark text for contrast */
-  padding: 10px 20px; /* Padding for button */
-  border: none; /* No border */
-  border-radius: 5px; /* Rounded corners */
-  font-size: 1.2rem; /* Font size */
-  cursor: pointer; /* Pointer cursor on hover */
-  display: block; /* Make it a block element for centering */
-  width: 100%; /* Full width */
-  margin-top: 20px; /* Space above the button */
+  background-color: #fdd835;
+  color: #333;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: block;
+  width: 100%; 
+  margin-top: 20px;
 }
 
-/* Button hover effect */
 .new-search-button:hover {
-  background-color: #fbc02d; /* Slightly darker yellow on hover */
+  background-color: #fbc02d; 
 }
 
 .no-songs-message {
-  text-align: center; /* Center the message */
-  font-size: 1.2rem; /* Font size */
-  color: #fff; /* White color for contrast */
-  margin-top: 20px; /* Space above the message */
+  text-align: center;
+  font-size: 1.2rem;
+  color: #fff;
+  margin-top: 20px; 
 }
   
-  /* Responsive styling */
   @media (max-width: 768px) {
     .result-page-container {
       max-width: 90%;

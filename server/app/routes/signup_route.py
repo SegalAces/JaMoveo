@@ -29,23 +29,17 @@ async def create_user(request: SignupRequest, db = Depends(get_db)):  # Use Depe
         )
         
         # Prepare user data for insertion
-        user_data = user.model_dump()
-        print(f"User data to be inserted: {user_data}")
-        
+        user_data = user.model_dump()        
         # Insert user into the database
         result = await db['users'].insert_one(user_data)
         
         # Check if the insertion was successful
         if result.inserted_id is None:
             raise HTTPException(status_code=500, detail="User insertion failed")
-
-        print(f"Insert result: {result.inserted_id}")
-
         return {"message": "User created successfully"}
     
     except HTTPException as http_err:
         # Re-raise the HTTPException for FastAPI to handle
         raise http_err  
     except Exception as e:
-        print(f"Error occurred during user signup: {e}")
         raise HTTPException(status_code=500, detail="An unexpected error occurred.")

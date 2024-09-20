@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import ResultPage from "./ResultPage/ResultPage.js"; // Assuming this is the result page component
+import ResultPage from "./ResultPage/ResultPage.js";
 import { SERVER_URL } from "../../config.js";
 import "./MainAdmin.css";
 
@@ -16,9 +16,7 @@ const MainAdmin = ({ isRehearsalOn, sendMessage }) => {
       action: "start_rehearsal",
       rehearsal_state: true,
     };
-    console.log("sending start rehearsal message");
     sendMessage(message);
-    console.log("start rehearsal message sent");
   };
 
   // Handle search action (on click or enter key)
@@ -30,8 +28,6 @@ const MainAdmin = ({ isRehearsalOn, sendMessage }) => {
       );
       const results = await response.json();
       setSearchResults(results); // Update the results with what is returned from the server
-      console.log("results from server:", results);
-      console.log("results on variable:", searchResults);
     } catch (error) {
       console.error("Error fetching search results:", error);
     }

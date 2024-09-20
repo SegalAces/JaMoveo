@@ -11,7 +11,7 @@ async def connect_to_db():
     try:
         # Create the Motor client
         client = AsyncIOMotorClient(mongo_url)
-        db = client['JaMoveo']  # Access the specific database
+        db = client['JaMoveo']
         print("Connected to MongoDB!")
         return db, client  # Return both db and client
     except ServerSelectionTimeoutError as err:
