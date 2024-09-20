@@ -78,8 +78,10 @@ function SignUp({ role = "user", handleSuccessfulSignup }) {
   };
 
   const validateForm = () => {
-    if (!selectedInstrument) {
-      setInstrumentError("Please select an instrument.");
+    if (usernameHasError || passwordHasError || !selectedInstrument) {
+      if (!selectedInstrument) {
+        setInstrumentError("Please select an instrument.");
+      }
       return false;
     }
     return true;
